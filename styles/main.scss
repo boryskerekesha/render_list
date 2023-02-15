@@ -1,0 +1,220 @@
+@font-face {
+  font-family: Mont;
+  src: url('../fonts/mont-regular.otf');
+}
+
+@font-face {
+  font-family: 'Mont-bolt';
+  src: url('../fonts/mont-bold.otf');
+}
+
+.body {
+  margin: 0;
+  font-family: Mont, serif;
+  color: #313237;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__loader {
+    &--off {
+      display: none;
+    }
+  }
+
+  &__products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin: 50px;
+  }
+}
+
+.products-list {
+  width: 272px;
+  height: 507px;
+  padding: 24px;
+  box-sizing: border-box;
+  border: 1px solid #E2E6E9;
+
+  &__img-box {
+    margin: 6px auto 0;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__title {
+    margin: 17px 0 0;
+    font-family: Mont, serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    min-height: 42px;
+  }
+
+  &__price-box {
+    padding: 7px 0;
+    border-bottom: 1px solid #E2E6E9;
+    margin-bottom: 8px;
+  }
+
+  &__price {
+    font-family: 'Mont-bolt', serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 140%;
+
+    &--discont {
+      font-family: Mont, serif;
+      color: #89939A;
+      text-decoration-line: line-through;
+      margin-left: 8px;
+    }
+  }
+
+  &__about {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+  }
+
+  &__feature {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #89939A;
+  }
+
+  &__feature-size {
+    font-family: 'Mont-bolt';
+    color: #313237;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &__add-cart-box {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__add-cart {
+    font-family: Mont, serif;
+    display: block;
+    box-sizing: border-box;
+    width: 176px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #313237;
+    transition: box-shadow;
+    border: none;
+
+    &:hover {
+      box-shadow: 0px 3px 13px rgba(23, 32, 49, 0.26);
+    }
+
+    &:active {
+      border: 1px solid #E2E6E9;
+      background-color: #E2E6E9;
+      color: #27AE60;
+      box-shadow: none
+    }
+  }
+
+  &__favorite {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #B4BDC4;
+    padding: 0;
+    background-image: url(../img/favorite.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: border 0.3s;
+
+    &:hover {
+      border: 1px solid #313237;
+    }
+
+    &:active {
+      background-image: url(../img/favorite-selected.svg);
+      border: 1px solid #E2E6E9;
+    }
+  }
+}
+
+.loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+
+  &__wave {
+    width: 5px;
+    height: calc(100vh / 2);
+    background: linear-gradient(45deg, rgb(85, 89, 89), #fff);
+    margin: 10px;
+    animation: wave 1s linear infinite;
+    border-radius: 20px;
+
+    &:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    &:nth-child(6) {
+      animation-delay: 0.5s;
+    }
+
+    &:nth-child(7) {
+      animation-delay: 0.6s;
+    }
+
+    &:nth-child(8) {
+      animation-delay: 0.7s;
+    }
+
+    &:nth-child(9) {
+      animation-delay: 0.8s;
+    }
+
+    &:nth-child(10) {
+      animation-delay: 0.9s;
+    }
+
+    @keyframes wave {
+      0% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(0);
+      }
+    }
+  }
+}
